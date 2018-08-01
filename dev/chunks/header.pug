@@ -1,0 +1,98 @@
+div(class="header" style="background-image: url(../img/main_img.jpg); background-color: white; background-size: cover; background-position:center;")
+  .header__top__border__bottom
+    .header__top.container
+      .menu
+        ul
+          -var mainmenu = ['Доставка','Оплата','Гарантии','Контакты','Статус  заказа']
+            each item in mainmenu
+              if(item == 'Статус  заказа')
+                li.active
+                  a(href='#')=item
+              else
+                li
+                  a(href='#')=item
+      form.search-form
+        .search.search-box
+          input(type="search" name="" placeholder="" class="input")
+          .search-icon
+  .burger
+    span
+    span
+    span 
+  .header__middle.container.clearfix
+    div
+      .col-tablet-small-1-4.column
+        .logo
+          a(href="#")
+            .logo__img
+              img(src="img/logo.png", alt="")
+            .logo__text Интернет-магазин цветов
+      .col-tablet-small-1-2.column     
+        .contacts
+          div
+            .contacts__address 
+              strong г. Челябинск, 
+              |ул. Воровского, 30А
+            .contacts__email 
+              a(href="email:#") e-mail: buket@mail.ru
+            br
+            .contacts__phone
+              a(href='tel:+380978432229')
+                .sprite.sprite-phone
+                | 
+                |8(351)
+                |    
+                span 567 21 46 
+      .col-tablet-small-1-4.column
+        .basket
+          .basket__button 
+            a(href="#")
+              .sprite.sprite-basket
+              |
+              |Корзина
+          .basket__text 
+            strong 10 
+            |товаров 
+            p на сумму 
+              strong 1000 руб.
+  .header__bottom.clearfix
+    .container
+      ul.bottommenu.clearfix
+        -
+          var mainmenu = [
+            {
+              img : 'img/bouquets.png',
+              text:'Букеты'
+            }, 
+            {
+              img:'img/flowers.png',
+              text:'Цветы'
+            }, 
+            {
+              img:'img/roses.png',
+              text:'Розы'
+            }, 
+            {
+              img:'img/compositions.png',
+              text:'Композиции'
+            }, 
+            {
+              img:'img/gifts.png',
+              text:'Подарки'
+            }, 
+            {
+              img:'img/wedding-bouquets.png',
+              text:'Свадебные букеты'
+            }
+          ]
+        each item, index in mainmenu
+          if(index==3)
+            li.active
+              a(href='#')               
+                img(src=item.img, alt="")
+                div=item.text 
+          else 
+            li
+              a(href='#')               
+                img(src=item.img, alt="")
+                div=item.text 

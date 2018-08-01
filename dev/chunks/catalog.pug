@@ -1,0 +1,82 @@
+.container
+  .catalog
+    .catalog__filter
+      .button#toggle        
+        .sprite.sprite-filter       
+        span Фильтр
+      include filter
+    ul.row
+      -
+        var products=[
+          {
+            img:'img/product-1.png',
+            text:'Новогодний подарок', 
+            price: '2000 руб',
+            label: 'Хит'
+
+          }, 
+          {
+            img:'img/product-2.png',
+            text:'Букет из красных роз, 1000 шт.',
+            price: '5589 руб',
+            label: 'New'
+
+          }, 
+          {
+            img:'img/product-3.png',
+            text:'Букет из альстромерий и коробка конфет Rafaello',
+            price: '1562 руб',
+            label: 'Акция'
+          }, 
+          {
+            img:'img/product-4.png',
+            text:'Новогодний подарок',
+            price: '2000 руб',
+            label: ''
+          }, 
+          {
+            img:'img/product-5.png',
+            text:'Букет из красных роз, 1000 шт.',
+            price: '5589 руб',
+             label: '' 
+          }, 
+          {
+            img:'img/product-6.png',
+            text:'Букет из альстромерий и коробка конфет Rafaello',
+            price: '1562 руб',
+            label: ''
+          }
+        ]
+      each item,index in products
+        li.column.col-tablet-small-1-2.col-tablet-1-3
+          .catalog__card
+            .product__label
+              .label__icon
+                if(item.label=='Хит')
+                  .label__hit
+                    .label__text=item.label
+                else if(item.label=='New')
+                  .label__new
+                    .label__text=item.label
+                else if(item.label=='Акция')
+                  .label__action
+                    .label__text=item.label
+                else
+                  .label
+                    if(item.label)
+                      .label__text=item.label
+            .product__img
+              img(src=item.img, alt="")
+            .product__title
+              a(href='#')=item.text
+            .product__price=item.price
+            .order 
+              a(href="#") Заказать
+    ul.catalog__pages
+      -for(var i=1; i<5; i++)
+        if(i==3)
+          li.catalog__page.catalog__page__active 
+            a(href="#")=i
+        else
+          li.catalog__page
+            a(href="#")=i 

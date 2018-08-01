@@ -1,0 +1,31 @@
+{
+  "name": "maki",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.1.0",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-plumber-notifier": "0.0.3",
+    "gulp-pug": "^3.3.0",
+    "ion-rangeslider": "^2.2.0",
+    "normalize.css": "^8.0.0",
+    "nouislider": "^11.1.0",
+    "reset-css": "^3.0.0",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1",
+    "gulp-install": "^1.1.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-server-livereload": "^1.9.2"
+  },
+  "description": ""
+}

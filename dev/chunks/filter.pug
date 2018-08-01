@@ -1,0 +1,63 @@
+-
+  var flower=["Роза", "Лилия", "Орхидея", "Гербер"]
+  var whom=["Мужчина", "Женщина", "Ребенок", "Семья"]
+div.filter-open
+  form
+    .filter_group
+      .filter__title Стоимость
+      .range-Slider
+        #range-slider
+        div.values
+          #lower-value
+          #upper-value
+        //- div(data-role="rangeslider")
+        //-   label(for="range-1a") Rangeslider:
+        //-   input(type="range" name="range-1a" id="range-1a" min="0" max="100" value="40")
+        //-   label(for="range-1b") Rangeslider:
+        //-   input(type="range" name="range-1b" id="range-1b" min="0" max="100" value="80")
+    .filter_group
+      .filter__title Букеты с 
+      div
+        .group__checkbox.clearfix
+          label.col-1-2 
+            input(type="checkbox")
+            span.my_checkbox
+            span Роза
+          label.col-1-2
+            input(type="checkbox")
+            span.my_checkbox
+            span Орхидея
+          label.col-1-2
+            input(type="checkbox")
+            span.my_checkbox
+            span Лилия
+          label.col-1-2
+            input(type="checkbox")
+            span.my_checkbox
+            span Гербер      
+    .filter_group
+      .filter__title Кому
+      div
+        .group__checkbox.clearfix
+          label.col-1-2
+            input(type="checkbox")
+            span.my_checkbox
+            span Мужчина
+          label.col-1-2 
+            input(type="checkbox")
+            span.my_checkbox
+            span Женщина
+          label.col-1-2
+            input(type="checkbox")
+            span.my_checkbox
+            span Ребенок
+          label.col-1-2 
+            input(type="checkbox")
+            span.my_checkbox
+            span Семья
+  .filter_group
+    .filter__title Поиск
+    .search-form
+      .search-box__form
+        input(type="search" name="" placeholder="Что вы ищите?" class="input")
+        .search-icon

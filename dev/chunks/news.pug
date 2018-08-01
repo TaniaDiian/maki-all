@@ -1,0 +1,39 @@
+.news
+  .container
+    div
+      .news__heading 
+        a(href="#") Новости
+      .news__text 
+        a(href="#") Все новости
+    ul.row
+      -
+        var news = [
+          {
+            img : 'img/news-1.png',
+            date:'01.01.16',
+            title: 'С Новым годом 2016!'
+          }, 
+          {
+            img:'img/news-2.png',
+            date:'01.01.16',
+            title: 'Как украсить дом к Новому году?'
+          }, 
+          {
+            img:'img/news-3.png',
+            date:'01.01.16',
+            title: 'Розыгрыш новогоднего подарка'
+          }
+        ]
+      each item in news
+        li.col-tablet-1-3.column
+          .news__image
+            a(href="#")
+              img(src=item.img, alt="")
+              .news__image-hover
+               .hover_text Читать...
+          .news__date
+            a(href="#")=item.date
+          .news__title
+            a(href="#")=item.title
+
+      

@@ -1,0 +1,38 @@
+.footer
+  .footer__menu
+    .container
+      ul
+        -var mainmenu = ['О магазине','Почему мы?', 'Отзывы', 'Скидки','Гарантии', 'Возврат денежных средств',' Корпоративные букеты и подарки','Доставка', 'Доставка в праздничные дни', 'Спецпредложения к праздникам']
+          each item in mainmenu
+            li
+              a(href='#')=item
+      div 
+  .footer__contacts
+    .container
+      .contacts__title 
+        a(href="#") Служба доставки цветов © 2016
+      div
+        .contacts__phone
+          a(href='tel:+380978432229')
+            .sprite.sprite-phone-white
+            | 
+            |8(351)
+            |    
+            span 567 21 46 
+        .contacts__email
+          a(href="email:#") 
+            .sprite.sprite-email 
+            |e-mail: buket@mail.ru
+
+script(src="js/jquery.js")
+script(src="js/nouislider.min.js")
+script(src="js/js.js")
+
+
+//- script(type="text/javascript" src="js/ion.rangeSlider.js")
+//- script(src="http://code.jquery.com/jquery-1.11.1.min.js")
+//- script(src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js")
+
+
+
+

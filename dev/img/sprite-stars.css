@@ -1,0 +1,17 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-stars_empty {
+    width: 105px;
+    height: 21px;
+    background-position: -5px -5px;
+}
+
+.sprite-stars_fill {
+    width: 105px;
+    height: 21px;
+    background-position: -5px -36px;
+}
